@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://imi.go.jp/ns/core/context.jsonld",
+    {
+      "gcm": "http://example.org/gcm/"
+    }
+  ],
+  "@type": "施設型",
+  "ID": {
+    "@type": "ID型",
+    "体系": { "@type": "ID体系型", "種別": "施設ID" },
+    "識別値": "/id"
+  },
+  "種別コード/typeInformation": { "$ref": "CodeInformationModel.json" },
+  "名称": {
+    "@type": "名称型",
+    "表記": "/name",
+    "カナ表記": "/nameKana",
+    "ローマ字表記": "/nameEn"
+  },
+  "通称": "/alternateName",
+  "説明": ["/description", "/abstract"],
+  "住所/facilityAddress": { "$ref": "Address.json" },
+  "アクセス": { "@type": "アクセス型", "説明": "/accessMethod" },
+  "記述": [
+    { "@type": "記述型", "種別": "駐車場有無", "説明": "/parkingStatus" },
+    { "@type": "記述型", "種別": "状態", "説明": "/status" },
+    { "@type": "記述型", "種別": "防災情報", "説明": "/shelterInformation" },
+    { "@type": "記述型", "種別": "一般利用可否", "説明": "/generalUserAcceptanceStatus" }
+  ],
+  "連絡先/contactPointInformation": { "$ref": "ContactPoint.json" },
+  "関連施設/relatedFacility": { "$ref": "Facility.json" },
+  "設備/equipmentInformation": { "$ref": "Equipment.json" },
+  "利用可能時間": {
+    "@type": " イベントスケジュール型",
+    "開始時間": "/startTime",
+    "終了時間": "/endTime",
+    "説明": ["/availableDay", "/availabileDateTimeDescription", "/availabileDateTimeFormula"]
+  },
+  "料金": [
+    {
+      "@type": "価格型",
+      "説明": ["/feeStatus", "/feeDescription", "/paymentType"]
+    },
+    {
+      "@type": "価格型",
+      "種別": "基準料金",
+      "金額": {
+        "@type": "金額型",
+        "通貨": "JPN",
+        "数値": "/standardFee_JPY"
+      }
+    }
+  ],
+  "収容人数": { "@type": "数量型", "数値": "/capacity" },
+  "駐車場": {
+    "@type": "駐車場型",
+    "説明": "/parkingInformation",
+    "料金": { "@type": "価格型", "説明": "/parkingFeeStatus" }
+  },
+  "関連施設": {
+    "@type": "施設型",
+    "種別": "サービス担当区域",
+    "住所": {
+      "@type": "住所型",
+      "都道府県コード": "/serviceAreaPrefectureCode",
+      "市区町村コード": "/serviceAreaCityCode",
+      "町名": "/serviceAreaSmallArea"
+    },
+    "参照": {
+      "@type": "参照型",
+      "種別": "サービス担当区域のポリゴン",
+      "参照先": "/serviceAreaPolygon"
+    },
+    "説明": "/serviceAreaRemark"
+  },
+  "gcm:アクセシビリティ情報/accessibilityInformation": { "$ref": "AccessibilityInformation.json" },
+  "gcm:子供預かり情報/childcareInformation": { "$ref": "ChildcareInformation.json" }
+}

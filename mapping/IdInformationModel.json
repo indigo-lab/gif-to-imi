@@ -1,0 +1,6 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "ID型",
+  "体系": { "@type": "ID体系型", "種別": "/idType" },
+  "識別値": "/id"
+}

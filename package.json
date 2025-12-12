@@ -1,0 +1,29 @@
+{
+  "name": "gif-to-imi",
+  "version": "1.0.0",
+  "description": "GIF から IMI への JX マッピング",
+  "keywords": [
+    "gif",
+    "imi"
+  ],
+  "homepage": "https://github.com/indigo-lab/gif-to-imi#readme",
+  "bugs": {
+    "url": "https://github.com/indigo-lab/gif-to-imi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indigo-lab/gif-to-imi.git"
+  },
+  "license": "MIT",
+  "author": "indigo-lab",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/test-*.js"
+  },
+  "devDependencies": {
+    "@indigo-lab/jx": "github:indigo-lab/jx",
+    "exceljs": "^4.4.0",
+    "tape": "^5.9.0"
+  }
+}

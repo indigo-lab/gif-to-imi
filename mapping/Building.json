@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://imi.go.jp/ns/core/context.jsonld",
+    {
+      "gcm": "http://example.org/gcm/"
+    }
+  ],
+  "@type": "建物型",
+  "ID/id": {
+    "@type": "ID型",
+    "体系": { "@type": "ID体系型", "種別": "建物ID" },
+    "識別値": "."
+  },
+  "種別コード/typeInformation": { "$ref": "CodeInformationModel.json" },
+  "種別コード/purpose": { "$ref": "CodeInformationModel.json" },
+  "種別コード/structure": { "$ref": "CodeInformationModel.json" },
+  "名称": {
+    "@type": "名称型",
+    "表記": "/name",
+    "カナ表記": "/nameKana",
+    "ローマ字表記": "/nameEn"
+  },
+  "通称": "/alternateName",
+  "説明": ["/description", "/remark"],
+  "住所/buildingAddress": { "$ref": "Address.json" },
+  "要約": "/abstract",
+  "gcm:関連建物/relatedBuilding": { "$ref": "Building.json" },
+  "記述/status": { "@type": "記述型", "種別": "状態", "説明": "." },
+  "記述/performanceDescription": { "@type": "記述型", "種別": "性能", "説明": "." },
+  "設備/equipmentInformation": { "$ref": "Equipment.json" },
+  "gcm:敷地/site": { "$ref": "Land.json" },
+  "建築面積/buildingFootprintArea_MTK": { "@type": "面積型", "数値": ".", "単位表記": "m^2" },
+  "延べ面積/totalFloorArea_MTK": { "@type": "面積型", "数値": ".", "単位表記": "m^2" },
+  "最高の高さ/height_MTR": { "@type": "長さ型", "数値": ".", "単位表記": "m" },
+  "地上階数": "/storeysAboveGround",
+  "地下階数": "/storeysBelowGround",
+  "竣工日": "/dateOfCompletion",
+  "連絡先/contactPointInformation": { "$ref": "ContactPoint.json" },
+  "gcm:アクセシビリティ情報/accessibilityInformation": { "$ref": "AccessibilityInformation.json" }
+}

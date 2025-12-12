@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://imi.go.jp/ns/core/context.jsonld",
+    {
+      "xx": "http://example.org/xx/"
+    }
+  ],
+  "@type": "xx:アクセシビリティ型",
+  "xx:車椅子可": "/wheelchairPermissionStatus",
+  "xx:車椅子貸出": "/wheelchairRentalStatus",
+  "xx:ツエ貸出": "/caneRentalStatus",
+  "xx:バリアフリートイレ": "/multipurposeToiletStatus",
+  "xx:スロープ、エレベータ、エスカレータ": "/rampsOrElevatorsOrEscalatorsStatus",
+  "xx:点字ブロック等の移動支援": "/mobilitySupportForBrailleBlocksEtcStatus",
+  "xx:点字や読上による支援": "/brailleAndReadingAssistanceStatus",
+  "xx:盲導犬・介助犬・聴導犬同伴": "/accompaniedByGuideDogsAndServiceDogsStatus",
+  "xx:字幕": "/subtitlesStatus",
+  "xx:筆談対応": "/writingSupportStatus",
+  "xx:優先駐車場": "/priorityParkingStatus",
+  "xx:オストメイト対応トイレ": "/toiletForOstomatesStatus",
+  "xx:子供トイレ": "/childToiletStatus",
+  "xx:授乳室": "/nurseryStatus",
+  "xx:おむつ替えコーナー": "/diaperChangingCornerStatus",
+  "xx:飲食可否": "/foodAndDrinkPermissionStatus",
+  "xx:ベビーカー貸出": "/strollerRentalStatus",
+  "xx:ベビーカー利用可": "/strollerPermissionStatus",
+  "説明": "/remark"
+}

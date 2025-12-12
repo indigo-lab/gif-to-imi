@@ -1,0 +1,6 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "関与型",
+  "役割コード/role": { "$ref": "CodeInformationModel.json" },
+  "関与者/involved": { "$ref": "Person.json" }
+}

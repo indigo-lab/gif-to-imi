@@ -1,0 +1,6 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "コード型",
+  "コード種別": { "@type": "コードリスト型", "種別": "/codeType" },
+  "識別値": "/code"
+}

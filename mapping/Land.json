@@ -1,0 +1,25 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "土地型",
+  "ID/idGroup": { "$ref": "IdInformationModel.json" },
+  "種別コード/usage": { "@type": "コード型", "種別": "土地コード", "識別値": "." },
+  "名称": {
+    "@type": "名称型",
+    "表記": "/name",
+    "カナ表記": "/nameKana",
+    "ローマ字表記": "/nameEn"
+  },
+  "通称": "/alternateName",
+  "説明": "/description",
+  "住所/landAddress": { "$ref": "Address.json" },
+  "面積": { "@type": "面積型", "数値": "/landArea_MTK", "単位表記": "m^2" },
+  "参照": { "@type": "参照型", "種別": "形状イメージ", "参照先": "/landFormImageUrl" },
+  "地理座標": {
+    "@type": "座標型",
+    "座標データ": "/landForm",
+    "座標データ書式": { "@type": "コード型", "種別": "座標データ書式" },
+    "識別値": "GeoJSON"
+  },
+  "記述/remark": { "@type": "記述型", "種別": "備考", "説明": "." },
+  "連絡先/contactPointInformation": { "$ref": "ContactPoint.json" }
+}

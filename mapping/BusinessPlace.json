@@ -1,0 +1,24 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "施設型",
+  "ID": [
+    {
+      "@type": "ID型",
+      "種別": "ID",
+      "体系": { "@type": "ID体系型", "種別": "事業所ID" },
+      "識別値": "/id"
+    },
+    {
+      "@type": "ID型",
+      "種別": "関連法人番号",
+      "体系": { "@type": "ID体系型", "種別": "法人番号" },
+      "識別値": "/relatedLegalEntityNumber"
+    }
+  ],
+  "名称": {
+    "@type": "名称型",
+    "表記": "/name"
+  },
+  "住所/businessPlaceAddress": { "$ref": "Address.json" },
+  "説明": "/description"
+}

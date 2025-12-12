@@ -1,0 +1,15 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "関与型",
+  "役割コード/role": {
+    "$ref": "CodeInformationModel.json"
+  },
+  "関与者": {
+    "@type": "法人型",
+    "ID": {
+      "@type": "ID型",
+      "体系": { "@type": "ID体系型", "種別": "法人番号" },
+      "識別値": "/legalEntityNumber"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "@context": ["https://imi.go.jp/ns/core/context.jsonld", { "gcm": "http://example.org/gcm/" }],
+  "@type": "人型",
+  "ID/idGroup": { "$ref": "IdInformationModel.json" },
+  "氏名": [
+    {
+      "@type": "氏名型",
+      "姓": "/familyName",
+      "名": "/givenName",
+      "姓カナ表記": "/familyNameKana",
+      "名カナ表記": "/givenNameKana",
+      "姓ローマ字表記": "/familyNameEn",
+      "名ローマ字表記": "/givenNameEn",
+      "姓名": "/fullName",
+      "姓名カナ表記": "/fullNameKana",
+      "姓名ローマ字表記": "/fullNameEn",
+      "ミドルネーム": "/middleName",
+      "ミドルネームカナ表記": "/middleNameKana",
+      "ミドルネームローマ字表記": "/middleNameEn"
+    },
+    {
+      "@type": "氏名型",
+      "種別": "旧氏",
+      "姓": "/formerFamilyName",
+      "姓カナ表記": "/formerFamilyNameKana",
+      "姓ローマ字表記": "/formerFamilyNameEn"
+    },
+    {
+      "@type": "氏名型",
+      "種別": "通称名",
+      "姓名": "/alternativeName",
+      "姓名カナ表記": "/alternativeNameKana",
+      "姓名ローマ字表記": "/alternativeNameEn"
+    },
+    {
+      "@type": "氏名型",
+      "種別": "戸籍名",
+      "姓名": "/familyRegisterName",
+      "姓": "/familyRegisterFamilyName",
+      "名": "/familyRegisterGivenName"
+    }
+  ],
+  "国籍コード": { "@type": "コード型", "種別": "国コード", "識別値": "/nationality" },
+  "性別コード": { "@type": "コード型", "種別": "性別コード", "識別値": "/sex" },
+  "生年月日": "/dateOfBirth",
+  "死亡年月日": "/dateOfDeath",
+  "備考": "/remark",
+  "住所/address": { "$ref": "Address.json" },
+  "連絡先/contactPointInformation": { "$ref": "ContactPointInformation.json" },
+  "関与/roleInformation": { "$ref": "RoleInformationModel.json" },
+  "住所/registeredResidentAddress": { "$ref": "Address.json", "種別": "住民登録住所" },
+  "出生国コード": { "@type": "コード型", "種別": "国コード", "識別値": "/countryOfBirth" },
+  "年齢": { "@type": "数量型", "数値": "/age", "単位表記": "歳" },
+  "身長": { "@type": "数量型", "数値": "/height_CMT", "単位表記": "cm" },
+  "体重": { "@type": "数量型", "数値": "/weight_KGM", "単位表記": "kg" },
+  "記述": [
+    { "@type": "記述型", "種別": "機能支援の要否", "説明": "/functionalSupportNecessity" },
+    { "@type": "記述型", "種別": "機能支援の種別", "説明": "/functionalSupportType" },
+    { "@type": "記述型", "種別": "世帯主", "説明": "/headOfHousehold" },
+    { "@type": "記述型", "種別": "既婚・未婚", "説明": "/maritalStatus" },
+    { "@type": "記述型", "種別": "配偶者の有無", "説明": "/spouseStatus" },
+    { "@type": "記述型", "種別": "子の有無", "説明": "/parentship" },
+    { "@type": "記述型", "種別": "学生", "説明": "/studentStatus" },
+    { "@type": "記述型", "種別": "収入の有無", "説明": "/incomeStatus" }
+  ],
+  "gcm:confidentialInformation/confidentialInformation": { "$ref": "CodeInformationModel.json" }
+}

@@ -1,0 +1,130 @@
+{
+  "@context": [
+    "https://imi.go.jp/ns/core/context.jsonld",
+    {
+      "gcm": "http://example.org/gcm/"
+    }
+  ],
+  "@type": "イベント型",
+  "ID": {
+    "@type": "ID型",
+    "体系": { "@type": "ID体系型", "種別": "イベントID" },
+    "識別値": "/id"
+  },
+  "名称": [
+    {
+      "@type": "名称型",
+      "表記": "/eventName",
+      "カナ表記": "/eventNameKana",
+      "ローマ字表記": "/eventNameEn"
+    },
+    {
+      "@type": "名称型",
+      "種別": "通称",
+      "表記": "/alternateName"
+    },
+    {
+      "@type": "名称型",
+      "種別": "サブタイトル",
+      "表記": "/subTitle"
+    }
+  ],
+  "説明": ["/description", "/abstract"],
+  "gcm:サブイベント/subEvent": {
+    "@type": "イベント型",
+    "ID": {
+      "@type": "ID型",
+      "体系": { "@type": "ID体系型", "種別": "イベントID" },
+      "識別値": "."
+    }
+  },
+  "種別": "/eventType",
+  "参照": [
+    { "@type": "参照型", "種別": "イベントURL", "参照先": "/eventUrl" },
+    { "@type": "参照型", "種別": "コンテンツURL", "参照先": "/contentsUrl" },
+    { "@type": "参照型", "種別": "Web開催URL", "参照先": "/webinarUrl" }
+  ],
+  "記述": [
+    { "@type": "記述型", "種別": "状態", "説明": "/status" },
+    { "@type": "記述型", "種別": "タグ", "説明": "/tag" },
+    { "@type": "記述型", "種別": "Web開催", "説明": "/webinarStatus" },
+    { "@type": "記述型", "種別": "駐車場有無", "説明": "/parkingStatus" },
+    { "@type": "記述型", "種別": "言語コード", "説明": "/languageCode" },
+    { "@type": "記述型", "種別": "対象となる産業", "説明": "/targetIndustry" },
+    { "@type": "記述型", "種別": "所要時間", "説明": "/timeRequired" },
+    { "@type": "記述型", "種別": "掲載開始日", "説明": "/startDateOfPublication" },
+    { "@type": "記述型", "種別": "掲載終了日", "説明": "/endDateOfPublication" },
+    { "@type": "記述型", "種別": "受付場所", "説明": "/locationOfReception" },
+    { "@type": "記述型", "種別": "掲載終了日", "説明": "/endDateOfPublication" },
+    { "@type": "記述型", "種別": "ツール・環境", "説明": "/webToolAndEnvironment" },
+    { "@type": "記述型", "種別": "定員備考", "説明": "/capacityRemark" },
+    { "@type": "記述型", "種別": "外国語対応", "説明": "/foreignLanguageSupport" },
+    { "@type": "記述型", "種別": "外国語対応備考", "説明": "/foreignLanguageSupportRemark" },
+    { "@type": "記述型", "種別": "開催条件", "説明": "/holdingCondition" },
+    { "@type": "記述型", "種別": "申込期限日", "説明": "/deadlineDateOfApplication" },
+    { "@type": "記述型", "種別": "申込期限時刻", "説明": "/applicationDeadlineTime" },
+    { "@type": "記述型", "種別": "申込開始日", "説明": "/startDateOfApplication" },
+    { "@type": "記述型", "種別": "申込開始時刻", "説明": "/applicationStartTime" },
+    { "@type": "記述型", "種別": "申込URL", "説明": "/applicationUrl" },
+    { "@type": "記述型", "種別": "申込方法", "説明": "/applicationMethod" },
+    { "@type": "記述型", "種別": "決済種別", "説明": "/paymentType" }
+  ],
+  "キーワード": "/keyword",
+  "期間": [
+    { "@type": "詳細スケジュール型", "説明": "/holdingPattern" },
+    {
+      "@type": "イベントスケジュール型",
+      "開始日": { "@type": "日付型", "標準型日付": "/dateOfStart" },
+      "終了日": { "@type": "日付型", "標準型日付": "/dateOfEnd" },
+      "開始時間": "/startTime",
+      "終了時間": "/endTime",
+      "説明": "/dateTimeDescription"
+    }
+  ],
+  "開催場所": {
+    "@type": "地物型",
+    "説明": "/location",
+    "住所/locationAddress": { "$ref": "Address.json" },
+    "アクセス": { "@type": "アクセス型", "説明": "/accessMethod" }
+  },
+  "開催場所/venueFacility": {
+    "$ref": "Facility.json",
+    "駐車場": {
+      "@type": "駐車場型",
+      "説明": "/parkingInformation",
+      "料金": { "@type": "価格型", "説明": "/parkingFeeStatus" }
+    },
+    "関連施設": {
+      "@type": "施設関連型",
+      "役割": "駐輪場",
+      "施設": { "@type": "施設型", "説明": "/bicycleParkingInformation" }
+    }
+  },
+  "関連組織": [
+    {
+      "@type": "組織関連型",
+      "役割": "主催団体",
+      "組織": { "@type": "組織型", "表記": "/organizer" }
+    },
+    {
+      "@type": "組織関連型",
+      "役割": "共催団体",
+      "組織": { "@type": "組織型", "表記": "/coorganizer" }
+    },
+    {
+      "@type": "組織関連型",
+      "役割": "関連団体",
+      "組織": { "@type": "組織型", "表記": "/relatedGroup" }
+    }
+  ],
+  "利用対象": { "@type": "対象型", "説明": ["/targetPerson", "/targetRemark"] },
+  "人数": "/capacity",
+  "料金": {
+    "@type": "価格型",
+    "説明": ["/feeStatus", "/feeDescription"],
+    "金額": { "@type": "金額型", "通貨": "JPY", "金額": "/fee_JPY" }
+  },
+  "連絡先/contactPointInformation": { "$ref": "ContactPoint.json" },
+  "gcm:アクセシビリティ情報/accessibilityInformation": { "$ref": "AccessibilityInformation.json" },
+  "gcm:子供預かり情報/childcareInformation": { "$ref": "ChildcareInformation.json" }
+}

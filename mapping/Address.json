@@ -1,0 +1,53 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "住所型",
+  "住所コード/localGovernmentCode": {
+    "@type": "コード型",
+    "種別": "全国地方公共団体コード",
+    "識別値": "."
+  },
+  "ID/streetAddressId": { "@type": "ID型", "種別": "町字ID", "識別値": "." },
+  "都道府県": "/prefecture",
+  "市区町村": ["/cityAndCounty", "/city"],
+  "町名": "/streetAddress",
+  "記述": [
+    { "@type": "記述型", "種別": "番地以下", "説明": "/cityBlock" },
+    { "@type": "記述型", "種別": "町字以下", "説明": "/streetAddressAndCityBlock" },
+    { "@type": "記述型", "種別": "都道府県(カナ)", "説明": "/prefectureKana" },
+    { "@type": "記述型", "種別": "市区町村(郡)(カナ)", "説明": "/cityAndCountyKana" },
+    { "@type": "記述型", "種別": "町字(カナ)", "説明": "/streetAddressKana" },
+    { "@type": "記述型", "種別": "番地以下(カナ)", "説明": "/cityBlockKana" },
+    { "@type": "記述型", "種別": "建物名等(方書)(カナ)", "説明": "/buildingNameEtcKana" },
+    { "@type": "記述型", "種別": "連結表記(カナ)", "説明": "/fullAddressKana" },
+    { "@type": "記述型", "種別": "都道府県(英字)", "説明": "/prefectureEn" },
+    { "@type": "記述型", "種別": "市区町村(郡)(英字)", "説明": "/cityAndCountyEn" },
+    { "@type": "記述型", "種別": "町字(英字)", "説明": "/streetAddressEn" },
+    { "@type": "記述型", "種別": "番地以下(英字)", "説明": "/cityBlockEn" },
+    { "@type": "記述型", "種別": "建物名等(方書)(英字)", "説明": "/buildingNameEtcEn" },
+    { "@type": "記述型", "種別": "連結表記(英字)", "説明": "/fullAddressEn" },
+    { "@type": "記述型", "種別": "代表点の緯度", "説明": "/latitudeOfRepresentativePoint" },
+    { "@type": "記述型", "種別": "代表点の経度", "説明": "/longitudeOfRepresentativePoint" },
+    { "@type": "記述型", "種別": "座標参照系", "説明": "/coordinateReferenceSystem" },
+    { "@type": "記述型", "種別": "座標参照系コード", "説明": "/coordinateReferenceSystemCode" },
+    { "@type": "記述型", "種別": "郡", "説明": "/county" },
+    { "@type": "記述型", "種別": "政令市区", "説明": "/ward" },
+    { "@type": "記述型", "種別": "大字・町", "説明": "/largerSectionTown" },
+    { "@type": "記述型", "種別": "小字", "説明": "/smallAdministrativeUnit" },
+    { "@type": "記述型", "種別": "住居表示フラグ", "説明": "/displayedAddressFlag" },
+    { "@type": "記述型", "種別": "街区符号", "説明": "/areaCode" },
+    { "@type": "記述型", "種別": "住居番号", "説明": "/residenceNumber" },
+    { "@type": "記述型", "種別": "地番", "説明": "/landNumber" },
+    { "@type": "記述型", "種別": "建物名", "説明": "/buildingName" },
+    { "@type": "記述型", "種別": "フロア名", "説明": "/floorName" }
+  ],
+  "ビル名": "/buildingNameEtc",
+  "表記": "/fullAddress",
+  "郵便番号": "/postalCode",
+  "国コード/country": {
+    "@type": "コード型",
+    "種別": "国コード",
+    "識別値": "."
+  },
+  "丁目": "/chome",
+  "部屋番号": "/roomNumber"
+}

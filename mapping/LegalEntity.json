@@ -1,0 +1,53 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "法人型",
+  "ID/legalEntityNumber": {
+    "@type": "ID型",
+    "体系": { "@type": "ID体系型", "種別": "法人番号" },
+    "識別値": "."
+  },
+  "ID/idGroup": { "$ref": "IdInformationModel.json" },
+  "名称": {
+    "@type": "名称型",
+    "種別": "商号または名称",
+    "表記": "/tradeName",
+    "カナ表記": "/tradeNameKana",
+    "ローマ字表記": "/tradeNameEn"
+  },
+  "組織種別": {
+    "@type": "コード型",
+    "コード種別": { "@type": "コードリスト型", "種別": "法人種別コード" },
+    "識別値": "/categoryOfOrganization"
+  },
+  "通称": "/alternateName",
+  "活動状況": { "@type": "状況型", "説明": "/activityStatus" },
+  "説明": "/description",
+  "参照": { "@type": "参照型", "種別": "Webサイト", "参照先": "/webSiteUrl" },
+  "関連人員": [
+    { "@type": "人数型", "種別": "社員", "人数": "/numberOfCompanyEmployee" },
+    { "@type": "人数型", "種別": "正社員", "人数": "/numberOfRegularEmployee" },
+    { "@type": "人数型", "種別": "従業員", "人数": "/numberOfEmployee" }
+  ],
+  "代表者": {
+    "@type": "構成員型",
+    "構成員/representative": { "$ref": "Person.json" },
+    "種別": "/positionOfRepresentative"
+  },
+  "設立年月日": { "@type": "日時型", "標準型日付": "/dateOfEstablishment" },
+  "事業種目": "/categoryOfBusiness",
+  "住所/registeredAddress": { "$ref": "Address.json", "種別": "登記住所" },
+  "地物/businessPlaceInformation": { "$ref": "BusinessPlace.json", "種別": "事業所" },
+  "連絡先/contactPointInformation": {
+    "$ref": "ContactPoint.json"
+  },
+  "組織種別位置": "/positionOfOrganizationTypeInName",
+  "関連組織/relatedOrganization": { "$ref": "RelatedOrganizationInformationModel.json" },
+  "地物/facilityDescription": {
+    "@type": "地物型",
+    "種別": "関連施設",
+    "名称": { "@type": "名称型", "表記": "facilityDescription" }
+  },
+  "記述": { "@type": "記述型", "種別": "創業年", "説明": "/yearOfEstablishment" },
+  "事業年度開始日": { "@type": "日時型", "標準型日付": "/startDateOfFiscalYear" },
+  "資本金": { "@type": "金額型", "種別": "資本金", "通貨": "JPY", "ic:数値": "/capital_JPY" }
+}

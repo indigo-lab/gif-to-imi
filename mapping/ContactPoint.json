@@ -1,0 +1,12 @@
+{
+  "@context": "https://imi.go.jp/ns/core/context.jsonld",
+  "@type": "連絡先型",
+  "名称": { "@type": "名称型", "表記": "/contactPointName" },
+  "種別": "/contactPointPurpose",
+  "電話番号": "/contactPointPhoneNumber",
+  "Eメールアドレス": "/contactPointEmailAddress",
+  "Webサイト": "/contactPointUrl",
+  "記述/contactPointSocialMedia": { "@type": "記述型", "種別": "連絡先SNS", "説明": "." },
+  "住所/contactPointAddress": { "$ref": "Address.json" },
+  "説明": "/contactPointRemark"
+}

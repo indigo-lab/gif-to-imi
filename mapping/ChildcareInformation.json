@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://imi.go.jp/ns/core/context.jsonld",
+    {
+      "xx": "http://example.org/xx/"
+    }
+  ],
+  "@type": "xx:子供預かり情報型",
+  "xx:料金有無": "/feeStatus",
+  "料金": {
+    "@type": "価格型",
+    "説明": "/feeDescription",
+    "種別コード/feeInformation": { "$ref": "CodeInformationModel.json" }
+  },
+  "xx:最少年齢": "/minAge",
+  "xx:最少月齢": "/minAgeInMonth",
+  "xx:最大年齢": "/maxAge",
+  "利用可能時間": {
+    "@type": " イベントスケジュール型",
+    "開始時間": "/openingHour",
+    "終了時間": "/closingHour"
+  },
+  "xx:ベビーカー利用可": "/feeInformation",
+  "説明": "/remark"
+}
