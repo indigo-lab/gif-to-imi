@@ -55,13 +55,12 @@ test("test LeagalEntity with jx", function (t) {
       識別値: "101",
     },
     連絡先: {
-      "@context": "https://imi.go.jp/ns/core/context.jsonld",
       "@type": "連絡先型",
       Webサイト:
         "https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=4000012090001",
     },
   };
 
-  t.deepEqual(jx(mapping, gif, base), imi, "LegalEntity 1");
+  t.deepEqual(jx(mapping, gif, { base: base, jsonld: true }), imi, "LegalEntity 1");
   t.end();
 });
